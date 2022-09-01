@@ -1,11 +1,17 @@
 ﻿Feature of Interest and Properties
+
 # Name
+
 Description des entités d'intérêt et de leurs propriétés
+
 # Description
 Ce modelet décrit les entités d'intérêt et leurs propriétés (caractéristiques ou qualités). Il s'agit du patron d’ontologie au cœur de l'ontologie CoSWoT. Une propriété est intrinsèque à une entité d’intérêt et ne peut pas exister sans son entité d'intérêt. Une propriété a une valeur associée, qui est alors considérée unique dans le contexte où elle est exprimée (contexte temporel et spatial).
+
 # Motivating Scenario
 ## Exemple Batiment
+
 Une pièce est une entité d'intérêt dans le domaine de la domotique. Une pièce a par exemple une température intérieure de l’air ambiant dans la pièce, et un taux de CO2 de l’air ambiant dans la pièce. Un mur a une conductivité thermique constante, un radiateur a une consigne (hors gel, réduit, confort 1, manuel, … ) et une puissance, une fenêtre a un état (ouvert, fermé).
+
 ## Exemple Agriculture
 Les entités dans le domaine de l’agriculture peuvent être des phénomènes naturels (pluie, vent, parcelle cultivée, plant de tomate) mais aussi des dispositifs mécaniques ou électroniques (tracteurs, système d’arrosage, …)
 
@@ -18,18 +24,18 @@ une culture (un ensemble de plantes cultivé sur une parcelle) a comme propriét
 un système d’arrosage a comme propriété un débit d’eau, une fréquence d’arrosage, une durée d'arrosage, …
 
 # Competency Questions 
-### CQQ1 : Quelles sont les propriétés d’une entité d’intérêt ?
-La liste des propriétés associées à une entité d’intérêt.
 
-Exemple : La pièce 429 a une température de l’air ambiant, une luminosité, un taux d’humidité de l’air ambiant, taux de CO2 de l’air ambiant. 
-### CQQ2 : Quelles sont les propriétés de type température ?
-La liste des instances de la classe température (sous classe de property).
-
-Exemple : Room418Temperature,Room420Temperature, CuisineTemperature…
-### CQQ3 : Quelle est la capacité d’une salle ?
-La valeur de la propriété capacité de l’entité d’intérêt salle.
-
+| ID | Question in natural language | Example
+|---|---|---|
+| q1 |  Quelles sont les propriétés d’une entité d’intérêt | La liste des propriétés associées à une entité d’intérêt.
+Exemple : La pièce 429 a une température de l’air ambiant, une luminosité, un taux d’humidité de l’air ambiant, taux de CO2 de l’air ambiant. |
+|---|---|---|
+| q2 |Quelles sont les propriétés de type température ? | La liste des instances de la classe température (sous classe de property). Exemple : Room418Temperature,Room420Temperature, CuisineTemperature… |
+|---|---|---|
+| q3 |Quelle est la capacité d’une salle ? | La valeur de la propriété capacité de l’entité d’intérêt salle.
 la capacité d’une salle permet de connaitre le nombre maximum de personnes autorisées dans la salle.
+ |
+|---|---|---|
 
 
 # Term Glossary
@@ -57,9 +63,10 @@ IRI: http://www.w3.org/ns/ssn/Property
 A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.
 #
 # OWL Description
-## Diagramme
-Lien: <https://app.diagrams.net/#G1YLwbnZobNIHKCXJfScjohD-5jGThZfpf>
 
+## Diagramme
+
+Lien: <https://app.diagrams.net/#G1YLwbnZobNIHKCXJfScjohD-5jGThZfpf>
 ![](Aspose.Words.ec963108-8202-4837-a1d7-eaf0de5264c8.001.png)
 
 
