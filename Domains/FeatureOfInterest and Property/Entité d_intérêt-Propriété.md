@@ -14,23 +14,18 @@ Une pièce est une entité d'intérêt dans le domaine de la domotique. Une piè
 
 ## Exemple Agriculture
 Les entités dans le domaine de l’agriculture peuvent être des phénomènes naturels (pluie, vent, parcelle cultivée, plant de tomate) mais aussi des dispositifs mécaniques ou électroniques (tracteurs, système d’arrosage, …)
-
 Une parcelle a comme propriété une surface, une géométrie, une localisation, un type de sol, ....
-
 une plante cultivée a comme propriété une préconisation de date de semence, un nom de cultivar, un rendement max, ...
-
 une culture (un ensemble de plantes cultivé sur une parcelle) a comme propriété un stade de développement, une date de semence,  un rendement, …
-
 un système d’arrosage a comme propriété un débit d’eau, une fréquence d’arrosage, une durée d'arrosage, …
 
 # Competency Questions 
 
-| ID | Question in natural language | Example
+| ID | Question en language naturel | Exemple
 |---|---|---|
 | Q1 |  Quelles sont les propriétés d’une entité d’intérêt | La liste des propriétés associées à une entité d’intérêt. Exemple : La pièce 429 a une température de l’air ambiant, une luminosité, un taux d’humidité de l’air ambiant, taux de CO2 de l’air ambiant. |
 | Q2 |Quelles sont les propriétés de type température ? | La liste des instances de la classe température (sous classe de property). Exemple : Room418Temperature,Room420Temperature, CuisineTemperature… |
-| Q3 |Quelle est la capacité d’une salle ? | La valeur de la propriété capacité de l’entité d’intérêt salle.
-la capacité d’une salle permet de connaitre le nombre maximum de personnes autorisées dans la salle.|
+| Q3 |Quelle est la capacité d’une salle ? | La valeur de la propriété capacité de l’entité d’intérêt salle. La capacité d’une salle permet de connaitre le nombre maximum de personnes autorisées dans la salle.|
 
 
 # Term Glossary
@@ -61,8 +56,8 @@ A quality of an entity. An aspect of an entity that is intrinsic to and cannot e
 
 ## Diagramme
 
-Lien: <https://app.diagrams.net/#G1YLwbnZobNIHKCXJfScjohD-5jGThZfpf>
-![](Aspose.Words.ec963108-8202-4837-a1d7-eaf0de5264c8.001.png)
+Lien: [Drawio diagram online version](https://app.diagrams.net/#G1YLwbnZobNIHKCXJfScjohD-5jGThZfpf)
+![Diagram](./FeatureOfInterest-Property-Diagram.jpg)
 
 
 ## Recommendations
