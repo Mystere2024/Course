@@ -1,4 +1,4 @@
-# **Property and Sample**
+# **CoSWoT Ontology Modelets**
 
 # Description
 Les domains correspondent dans ce repository aux différents modelets de l'ontologie Coswot. Chaque dossier contient les sources (ttl/owl) de l'A-box et la T-box, ainsi qu'un ensemble de requêtes correspondant aux questions de compétences.
@@ -8,20 +8,20 @@ Le tableau suivant énumère la liste des modelets. Chaque modelet est décrit e
 
 | ID | Modelet | Description | Etat | 
 |---|---|---|---|
-| M1 | Entité d'intérêt et propriétés  |  | V 0.1|
-| M2 | Echantillons et propriétés  |  | V 0.1 |
-| M3 | Valeur Simple  |  | En cours |
-| M4 | Etat  |  | En cours |
-| M5 | Evaluation  |  | En cours |
-| M6 | Grandeurs physiques  |  | En cours |
-| M7 | Bâtiment et topologie  |  | |
+| M1 | Entité d'intérêt et propriétés  |  Entités d'intérêt et de leurs propriétés | V 0.1|
+| M2 | Echantillons et propriétés  | Propriétés mesurées des échantillons d’une entité d'intérêt | V 0.1 |
+| M3 | Valeur Simple  | Assignation d'une valeur simple à une propriété d'une entité d'intérêt | En cours |
+| M4 | Etat  | Valeurs qualitatives des propriétés | En cours |
+| M5 | Evaluation  | Evaluations des propriétés (observation, actuations, prédictions...) | En cours |
+| M6 | Grandeurs physiques  | Description des grandeurs physiques et unités  | En cours |
+| M7 | Bâtiment et topologie  | Description de la topologie du bâtiment | |
 | M8 | Procédure  |  | |
-| M9 | Capteurs  |  | |
-| M10 | Affordances  |  | V 0.1 |
+| M9 | Capteurs  | Description d’un noeud capteur et de ses sondes | |
+| M10 | Affordances  | Description d’affordances d’interaction avec un servient et méthodes de sélection d'affordances  |  0.1 |
 | M11 | Deploiement  |  | |
-| M12 | Aggrégation  |  | |
+| M12 | Aggrégation  | Logiques, spatiales, temporelles | |
 | M13 | Décision  |  | |
-| M14 | Personnalisation  |  | |
+| M14 | Personnalisation  | Profil utilisateur | |
 
 
 # Recommendations
