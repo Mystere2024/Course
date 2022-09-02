@@ -56,7 +56,7 @@ A quality of an entity. An aspect of an entity that is intrinsic to and cannot e
 
 ## Diagramme
 
-Lien: [Drawio diagram online version](https://app.diagrams.net/#G1YLwbnZobNIHKCXJfScjohD-5jGThZfpf)
+Lien: [Chowlk diagram online version](https://app.diagrams.net/#G1YLwbnZobNIHKCXJfScjohD-5jGThZfpf)
 ![Diagram](./FeatureOfInterest-Property-Diagram.jpg)
 
 
