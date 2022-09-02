@@ -71,204 +71,81 @@ Lien: <https://app.diagrams.net/#G1YLwbnZobNIHKCXJfScjohD-5jGThZfpf>
 
 
 ## Recommendations
-Une entité d’intérêt possède plusieurs caractéristiques qui sont représentées par les propriétés (à travers la relation hasProperty).
+- Une entité d’intérêt possède plusieurs caractéristiques qui sont représentées par les propriétés (à travers la relation hasProperty).
 
-Une instance de propriété est nécessairement rattachée à une instance d’entité d’intérêt (par la relation isPropertyOf, cardinalité minimum=1), et est spécifique à celle-ci (isPropertyOf est une relation fonctionnelle). 
+- Une instance de propriété est nécessairement rattachée à une instance d’entité d’intérêt (par la relation isPropertyOf, cardinalité minimum=1), et est spécifique à celle-ci (isPropertyOf est une relation fonctionnelle). 
 
-Les instances de propriétés sont regroupées dans des sous-classes qui peuvent qualifier le phénomène observé (Température, stade d’évolution) ou sujet d’actuation (luminosité, humidité) entre autres. Ce typage permettrait d’identifier les propriétés de même nature pour des besoins de raisonnement par exemple. 
+- Les instances de propriétés sont regroupées dans des sous-classes qui peuvent qualifier le phénomène observé (Température, stade d’évolution) ou sujet d’actuation (luminosité, humidité) entre autres. Ce typage permettrait d’identifier les propriétés de même nature pour des besoins de raisonnement par exemple. 
 
-La relation entre les entités d’intérêt et leur échantillons ainsi que les propriétés d’échantillons sont formalisés dans le modelet sample. 
+- La relation entre les entités d’intérêt et leur échantillons ainsi que les propriétés d’échantillons sont formalisés dans le modelet sample. 
 
-Le processus permettant l’assignation d’une valeur à une propriété est décrit dans le modelet Evaluation. 
+- Le processus permettant l’assignation d’une valeur à une propriété est décrit dans le modelet Evaluation. 
 
-Le concept de valeur simple d’une propriété est détaillé dans le modelet “Valeur Simple”.
+- Le concept de valeur simple d’une propriété est détaillé dans le modelet “Valeur Simple”.
 
-Les états des entités d’intérêt sont des propriétés (coswot:State) ayant des valeurs qualitatives. Elles sont définies dans le modelet “Etat”. 
+- Les états des entités d’intérêt sont des propriétés (coswot:State) ayant des valeurs qualitatives. Elles sont définies dans le modelet “Etat”. 
 
 ## Spécification dans l’ontologie
 
-
+```
 **sosa:FeatureOfInterest** a rdfs:Class ; a owl:Class ;
+rdfs:label "Feature Of Interest"@en ;
+rdfs:label "Entité d'Intérêt"@fr ;
+rdfs:isDefinedBy sosa: ;
+rdfs:comment "The thing whose property is being observed through a Sensor or whose property estimated/calculated in the course of an Evaluation to get a Value or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
+rdfs:comment "Une entité dont la propriété est en cours d'Observation par un Capteur ou dont la propriété estimée/calculée par une Evaluation afin d'obtenir une valeur ou dont la propriété est manipulée par un actionneur, ou qui est en cours d'Echantillonage ou transformée par un Echantillonage."@fr ;
+skos:definition "The thing whose property is being observed through a Sensor or whose property estimated/calculated in the course of an Evaluation to get a Value or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
+skos:example "When measuring the height of a tree, the height is the observed Property, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."@en ;
 
-`  `rdfs:label "Feature Of Interest"@en ;
+```
 
-`  `rdfs:label "Entité d'Intérêt"@fr ;
-
-`  `rdfs:isDefinedBy sosa: ;
-
-`  `rdfs:comment "The thing whose property is being observed through a Sensor or whose property estimated/calculated in the course of an Evaluation to get a Value or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
-
-`  `rdfs:comment "Une entité dont la propriété est en cours d'Observation par un Capteur ou dont la propriété estimée/calculée par une Evaluation afin d'obtenir une valeur ou dont la propriété est manipulée par un actionneur, ou qui est en cours d'Echantillonage ou transformée par un Echantillonage."@fr ;
-
-`  `skos:definition "The thing whose property is being observed through a Sensor or whose property estimated/calculated in the course of an Evaluation to get a Value or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
-
-`  `skos:example "When measuring the height of a tree, the height is the observed Property, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."@en ;
-
-
-
+```
 **ssn:Property** a owl:Class ;
+rdfs:label "Property"@en ;
+rdfs:label "Propriété"@fr ;
+rdfs:isDefinedBy sosa: ;
+rdfs:comment "A characteristic of a feature of interest that is interinsic to, and can not exist without the feature of interest."@en ;
+rdfs:comment "Une charactéristique intrinsèque de l'entité d'intérêt, qui ne peut exister indépendamment d'elle."@fr ;
+skos:definition "Une charactéristique intrinsèque de l'entité d'intérêt, qui ne peut exister indépendamment d'elle."@en ;
 
-`  `rdfs:label "Property"@en ;
+```
 
-`  `rdfs:label "Propriété"@fr ;
-
-`  `rdfs:isDefinedBy sosa: ;
-
-`  `rdfs:comment "A characteristic of a feature of interest that is interinsic to, and can not exist without the feature of interest."@en ;
-
-`  `rdfs:comment "Une charactéristique intrinsèque de l'entité d'intérêt, qui ne peut exister indépendamment d'elle."@fr ;
-
-`  `skos:definition "Une charactéristique intrinsèque de l'entité d'intérêt, qui ne peut exister indépendamment d'elle."@en ;
-
-
-
-#Add observableProperty and ActionableProperty
-
-#Axioms in sensor sosa:observes
-
-Ensemble de données (Dataset)
-
-T-Box : terminologie
-
+```
 **coswot:TemperatureProperty** a owl:Class ;  
+rdfs:label "Temperature"@en ;
+rdfs:label "Température"@fr ;
+rdfs:subClassOf ssnsosa:Property ;
+rdfs:isDefinedBy coswot: ;
+rdfs:comment "The temperature of a Feature of Interest."@en ;
+rdfs:comment "La température d'une Entité d'intérêt."@fr ;
+skos:definition "The temperature of a Feature of Interest."@en ;
+skos:definition "La température d'une Entité d'intérêt."@fr ;
+skos:example "La température d'une pièce, du sol, d'un processeur.."@fr.
+```
 
-`  `rdfs:label "Temperature"@en ;
-
-`  `rdfs:label "Température"@fr ;
-
-`  `rdfs:subClassOf ssnsosa:Property ;
-
-`  `rdfs:isDefinedBy coswot: ;
-
-`  `rdfs:comment "The temperature of a Feature of Interest."@en ;
-
-`  `rdfs:comment "La température d'une Entité d'intérêt."@fr ;
-
-`  `skos:definition "The temperature of a Feature of Interest."@en ;
-
-`  `skos:definition "La température d'une Entité d'intérêt."@fr ;
-
-`  `skos:example "La température d'une pièce, du sol, d'un processeur.."@fr.
-
+```
 **coswot:HumidityProperty** a owl:Class ;
+rdfs:label "Humidity"@en ;
+rdfs:label "Humidité"@fr ;
+rdfs:subClassOf sosa:Property ;
+rdfs:isDefinedBy coswot: ;
+rdfs:comment "The humidity Property of a Feature of Interest."@en ;
+rdfs:comment "L'humidité d'une Entité d'intérêt."@fr ;
+skos:definition "The humidity Property of a Feature of Interest."@en ;
+skos:definition "L'humidité d'une Entité d'intérêt."@fr ;
+skos:example "l'humidité d'une pièce, du sol.."@fr .
+```
 
-`  `rdfs:label "Humidity"@en ;
-
-`  `rdfs:label "Humidité"@fr ;
-
-`  `rdfs:subClassOf sosa:Property ;
-
-`  `rdfs:isDefinedBy coswot: ;
-
-`  `rdfs:comment "The humidity Property of a Feature of Interest."@en ;
-
-`  `rdfs:comment "L'humidité d'une Entité d'intérêt."@fr ;
-
-`  `skos:definition "The humidity Property of a Feature of Interest."@en ;
-
-`  `skos:definition "L'humidité d'une Entité d'intérêt."@fr ;
-
-`  `skos:example "l'humidité d'une pièce, du sol.."@fr .
-
+```
 **coswot:CarbonDioxideConcentrationProperty** a owl:Class ;
-
-`  `rdfs:label "Carbon dioxide concentration property"@en ;
-
-`  `rdfs:label "Niveau de CO2"@fr ;
-
-`  `rdfs:subClassOf sosa:Property ;
-
-`  `rdfs:isDefinedBy coswot: ;
-
-`  `rdfs:comment "The CO2 level of a Feature of Interest."@en ;
-
-`  `rdfs:comment "Le niveau de gaz carbonique d'une entité d'intérêt."@fr ;
-
-`  `skos:definition "The CO2 level of a Feature of Interest."@en ;
-
-`  `skos:definition "Le niveau de gaz carbonique d'une entité d'intérêt"@fr ;
-
-`  `skos:example "Le niveau de CO2 dans une pièce, une serre agricole.."@fr.
-
-
-
-#Add property AreaProperty
-
-A-Box : description des instances
-
-##Meeting Room 418
-
-**:418Meetingtemperature** a coswot:Temperature ;
-
-`                `coswot:hasPropertyValue "21.6"^^xsd:Decimal.
-
-**:418MeetingHumidity** a coswot:Humidity.
-
-`                `coswot:hasPropertyValue "0.6"^^xsd:Decimal.
-
-**:418Meetingluminosity** a coswot:Luminosity,
-
-`                `coswot:hasPropertyValue "800"^^xsd:Decimal.
-
-**:418Meetingco2** a coswot:CO2,
-
-`                `coswot:hasPropertyValue "0.7"^^xsd:Decimal.
-
-**:418Meeting** a sosa:FeatureOfInterest ;
-
-`  `rdfs:label "meeting room 418"@en, "sale de réunion 418"@fr ;
-
-`  `rdfs:comment "Meeting room 418 at 4th floor of Espace Fauriel, Mines Saint-Étienne" @en ;
-
-`  `rdfs:comment "Salle de réunion 418 au 4ème étage de l'espace Fauriel, Mines Saint-Étienne" @fr ;
-
-`  `sosa:hasProperty :418#temperature, :418#humidity, :418#co2, :418#luminosity.
-
-# Queries
-### Prefixes
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-PREFIX sosa: <http://www.w3.org/ns/sosa/>
-
-PREFIX coswot:  <https://coswot.gitlab.io/FeatureOfInterestOntology#>
-
-PREFIX  : <http://www.semanticweb.org/FatmaZohra/FeatureOfInterestBuilding#>
-
-### CQQ1 : Quelles sont les propriétés d’une entité d’intérêt ?
-SELECT  ?property 
-
-WHERE { :Office429 sosa:hasProperty ?property .}
-
-![Une image contenant texte
-
-Description générée automatiquement](Aspose.Words.ec963108-8202-4837-a1d7-eaf0de5264c8.002.png)
-### CQQ2: Quelles sont les propriétés de type température ?
-
-SELECT ?property
-
-WHERE { ?property a :Temperature .}
-
-![Une image contenant texte
-
-Description générée automatiquement](Aspose.Words.ec963108-8202-4837-a1d7-eaf0de5264c8.003.png)
-###
-
-
-
-
-
-
-
-
-
-
-
-
-
+rdfs:label "Carbon dioxide concentration property"@en ;
+rdfs:label "Niveau de CO2"@fr ;
+rdfs:subClassOf sosa:Property ;
+rdfs:isDefinedBy coswot: ;
+rdfs:comment "The CO2 level of a Feature of Interest."@en ;
+rdfs:comment "Le niveau de gaz carbonique d'une entité d'intérêt."@fr ;
+skos:definition "The CO2 level of a Feature of Interest."@en ;
+skos:definition "Le niveau de gaz carbonique d'une entité d'intérêt"@fr ;
+skos:example "Le niveau de CO2 dans une pièce, une serre agricole.."@fr.
+```
 
