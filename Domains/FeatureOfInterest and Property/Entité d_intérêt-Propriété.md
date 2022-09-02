@@ -27,15 +27,10 @@ un système d’arrosage a comme propriété un débit d’eau, une fréquence d
 
 | ID | Question in natural language | Example
 |---|---|---|
-| q1 |  Quelles sont les propriétés d’une entité d’intérêt | La liste des propriétés associées à une entité d’intérêt.
-Exemple : La pièce 429 a une température de l’air ambiant, une luminosité, un taux d’humidité de l’air ambiant, taux de CO2 de l’air ambiant. |
-|---|---|---|
-| q2 |Quelles sont les propriétés de type température ? | La liste des instances de la classe température (sous classe de property). Exemple : Room418Temperature,Room420Temperature, CuisineTemperature… |
-|---|---|---|
-| q3 |Quelle est la capacité d’une salle ? | La valeur de la propriété capacité de l’entité d’intérêt salle.
-la capacité d’une salle permet de connaitre le nombre maximum de personnes autorisées dans la salle.
- |
-|---|---|---|
+| Q1 |  Quelles sont les propriétés d’une entité d’intérêt | La liste des propriétés associées à une entité d’intérêt. Exemple : La pièce 429 a une température de l’air ambiant, une luminosité, un taux d’humidité de l’air ambiant, taux de CO2 de l’air ambiant. |
+| Q2 |Quelles sont les propriétés de type température ? | La liste des instances de la classe température (sous classe de property). Exemple : Room418Temperature,Room420Temperature, CuisineTemperature… |
+| Q3 |Quelle est la capacité d’une salle ? | La valeur de la propriété capacité de l’entité d’intérêt salle.
+la capacité d’une salle permet de connaitre le nombre maximum de personnes autorisées dans la salle.|
 
 
 # Term Glossary
@@ -88,7 +83,7 @@ Lien: <https://app.diagrams.net/#G1YLwbnZobNIHKCXJfScjohD-5jGThZfpf>
 ## Spécification dans l’ontologie
 
 ```
-**sosa:FeatureOfInterest** a rdfs:Class ; a owl:Class ;
+sosa:FeatureOfInterest a rdfs:Class ; a owl:Class ;
 rdfs:label "Feature Of Interest"@en ;
 rdfs:label "Entité d'Intérêt"@fr ;
 rdfs:isDefinedBy sosa: ;
@@ -100,7 +95,7 @@ skos:example "When measuring the height of a tree, the height is the observed Pr
 ```
 
 ```
-**ssn:Property** a owl:Class ;
+ssn:Property a owl:Class ;
 rdfs:label "Property"@en ;
 rdfs:label "Propriété"@fr ;
 rdfs:isDefinedBy sosa: ;
@@ -111,7 +106,7 @@ skos:definition "Une charactéristique intrinsèque de l'entité d'intérêt, qu
 ```
 
 ```
-**coswot:TemperatureProperty** a owl:Class ;  
+coswot:TemperatureProperty a owl:Class ;  
 rdfs:label "Temperature"@en ;
 rdfs:label "Température"@fr ;
 rdfs:subClassOf ssnsosa:Property ;
@@ -124,7 +119,7 @@ skos:example "La température d'une pièce, du sol, d'un processeur.."@fr.
 ```
 
 ```
-**coswot:HumidityProperty** a owl:Class ;
+coswot:HumidityProperty a owl:Class ;
 rdfs:label "Humidity"@en ;
 rdfs:label "Humidité"@fr ;
 rdfs:subClassOf sosa:Property ;
@@ -137,7 +132,7 @@ skos:example "l'humidité d'une pièce, du sol.."@fr .
 ```
 
 ```
-**coswot:CarbonDioxideConcentrationProperty** a owl:Class ;
+coswot:CarbonDioxideConcentrationProperty a owl:Class ;
 rdfs:label "Carbon dioxide concentration property"@en ;
 rdfs:label "Niveau de CO2"@fr ;
 rdfs:subClassOf sosa:Property ;
