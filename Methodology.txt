@@ -1,0 +1,9 @@
+
+
+
+
+1-------------Create ssh key for fatma-zohra.hannou@emse.fr
+DOne file emse (latitude/.ssh/)
+
+2--------------Clone Samod-templates
+
